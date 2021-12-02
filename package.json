@@ -1,0 +1,26 @@
+{
+  "name": "5100-assessment-mdisumma-main",
+  "version": "1.0.0",
+  "description": "This exam is in 2 parts.  Answer as many questions in Part 1. (25 points)  Answer ALL questions in Part 2. (40 points)",
+  "main": "question3.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdisumma/5100-assessment-mdisumma-main.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdisumma/5100-assessment-mdisumma-main/issues"
+  },
+  "homepage": "https://github.com/mdisumma/5100-assessment-mdisumma-main#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.28.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.15"
+  },
+  "type": "module"
+}
