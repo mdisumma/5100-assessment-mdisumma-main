@@ -14,3 +14,14 @@ const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 app.listen(port, () => {
 	console.log(`The server is listening on port ${port}.`);
 });
+
+app.use(express.static("public"));
+
+// app.get("/", async (request, response) => {
+	let { data, error } = await supabase
+		.from("leaders")
+		.select("*")
+		.order("name", { ascending: true });
+	// response.send(data);
+	console.log(data)
+// });
