@@ -11,17 +11,19 @@ const SERVICE_KEY =
 
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 
-app.listen(port, () => {
-	console.log(`The server is listening on port ${port}.`);
-});
+
 
 app.use(express.static("public"));
 
-// app.get("/", async (request, response) => {
+app.get("/api", async (request, response) => {
 	let { data, error } = await supabase
 		.from("leaders")
 		.select("*")
 		.order("name", { ascending: true });
-	// response.send(data);
+	response.send(data);
 	console.log(data)
-// });
+});
+
+app.listen(port, () => {
+	console.log(`The server is listening on port ${port}.`);
+});
