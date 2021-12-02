@@ -19,36 +19,36 @@ app.get("/api", async (request, response) => {
 		.select("*")
 		.order("name", { ascending: true });
 	response.send(data);
-	console.log(data)
+	// console.log(data)
 });
 //INSERT DATA
 app.post("/api", async (request, response) => {
-	let { data, error } = await supabase.from("leaders").insert([request.body]);
+	// let { data, error } = await supabase.from("leaders").insert([request.body]);
 	console.log(request.body);
 })
 
 //DELETE
-app.delete("/api", async (request, response) => {
-	let { data, error } = await supabase
-		.from("leaders")
-		.delete()
-		.match(request.body);
-	console.log(request.body);
-})
+// app.delete("/api", async (request, response) => {
+// 	let { data, error } = await supabase
+// 		.from("leaders")
+// 		.delete()
+// 		.match(request.body);
+// 	console.log(request.body);
+// })
 
 //PUT
-app.put("/api", async (request, response) => {
-	console.log(request.body);
+// app.put("/api", async (request, response) => {
+// 	console.log(request.body);
 
-	let { data, error } = await database
-		.from("leaders")
-		.update({
+// 	let { data, error } = await database
+// 		.from("leaders")
+// 		.update({
 			
-		})
-		.match({
+// 		})
+// 		.match({
 			
-		});
-});
+// 		});
+// });
 
 
 app.listen(port, () => {
