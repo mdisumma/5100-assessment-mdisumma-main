@@ -1,8 +1,12 @@
 const displayTable = document.querySelector("#displayTable")
 const submit = document.querySelector("#submit")
-const leaderName =
-const leaderCountry =
-const leaderAge =
+const leaderName = document.querySelector("#leader_name")
+console.log(leaderName)
+const leaderCountry = document.querySelector("#leader_country")
+console.log(leaderCountry)
+const leaderAge = document.querySelector("#leader_age")
+console.log(leaderAge)
+
     fetch("http://localhost:3000/api")
     .then((response) => response.json())
     .then((data) => {
