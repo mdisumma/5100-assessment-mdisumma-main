@@ -5,8 +5,31 @@ console.log(leaderName)
 const leaderCountry = document.querySelector("#leader_country")
 console.log(leaderCountry)
 const leaderAge = document.querySelector("#leader_age")
-console.log(leaderAge)
+console.log(leaderCountry)
 
+    
+//SUBMIT
+    submit.addEventListener("click", (e) => {
+        e.preventDefault()
+        fetch("http://localhost:3000/", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                name: leaderName.value,
+                country: leaderCountry.value,
+                age: leaderAge.value, 
+            }),
+        })
+            .then((response) => response.text())
+            .then((result) => console.log(result))
+            .catch((error) => console.log("error", error));
+    });
+
+    //DELETE
+
+    //UPDATE
+
+//DISPLAYDATA
     fetch("http://localhost:3000/api")
     .then((response) => response.json())
     .then((data) => {
@@ -20,22 +43,6 @@ console.log(leaderAge)
         </ul>`
         })
     })
-
-    submit.addEventListener("click", (e) => {
-        e.preventDefault()
-        fetch("http://localhost:3000/api", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                name: leaderName.value,
-                country: leaderCountry.value,
-                age: leaderAge.value, 
-            }),
-        })
-            .then((response) => response.text())
-            .then((result) => console.log(result))
-            .catch((error) => console.log("error", error));
-    });
 
 
 		
