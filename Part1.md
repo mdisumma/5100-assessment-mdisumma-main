@@ -26,7 +26,7 @@ const CurrentTime = () => {
 
 4. I've created a table called World Leaders. I've also created a table of Official Titles. However, I've been told the information isn't normalized. Why? How can I correct this? (5 points)
 
---By limiting a table to one purpose you reduce the number of duplicate data contained within your database.
+--By limiting the tables instead using collums to reduce the number of duplicate data contained within the database.
 
 5. Create a Javascript class that represents the properties of a world leader. Include a method that will return the number of years from today in which that leader has ruled. (8 points)
 
