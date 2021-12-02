@@ -27,14 +27,14 @@ app.post("/api", async (request, response) => {
 	console.log(request.body);
 })
 
-//DELETE
-// app.delete("/api", async (request, response) => {
-// 	let { data, error } = await supabase
-// 		.from("leaders")
-// 		.delete()
-// 		.match(request.body);
-// 	console.log(request.body);
-// })
+DELETE
+app.delete("/api", async (request, response) => {
+	let { data, error } = await supabase
+		.from("leaders")
+		.delete()
+		.match(request.body);
+	console.log(request.body);
+})
 
 //PUT
 // app.put("/api", async (request, response) => {
